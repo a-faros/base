@@ -1,8 +1,17 @@
 {
     "name": "a-faros/base",
     "type": "project",
-    "description": "The skeleton application for the Laravel framework.",
-    "keywords": ["laravel", "framework"],
+    "description": "App on the Laravel framework.",
+    "keywords": [
+        "laravel",
+        "framework"
+    ],
+    "authors": [
+        {
+            "name": "Ahmad Faros",
+            "email": "faros@email.com"
+        }
+    ],
     "license": "MIT",
     "require": {
         "php": "^8.1",
@@ -42,7 +51,8 @@
     "scripts": {
         "post-autoload-dump": [
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
-            "@php artisan package:discover --ansi"
+            "@php artisan package:discover --ansi",
+            "@php artisan filament:upgrade"
         ],
         "post-update-cmd": [
             "@php artisan vendor:publish --tag=laravel-assets --ansi --force"
